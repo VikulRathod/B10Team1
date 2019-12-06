@@ -1,0 +1,5 @@
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Models\bin\Debug\MyApp.Models.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Models\bin\Debug\MyApp.Models.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Models\obj\Debug\MyApp.Models.csprojResolveAssemblyReference.cache
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Models\obj\Debug\MyApp.Models.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Models\obj\Debug\MyApp.Models.pdb

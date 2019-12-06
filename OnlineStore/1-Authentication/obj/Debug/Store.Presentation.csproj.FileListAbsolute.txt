@@ -1,0 +1,13 @@
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\1-Authentication.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\1-Authentication.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.BLL.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.Models.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.Utility.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.DAL.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.BLL.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.Models.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.Utility.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\bin\MyApp.DAL.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\obj\Debug\Store.Presentation.csprojResolveAssemblyReference.cache
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\obj\Debug\1-Authentication.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\1-Authentication\obj\Debug\1-Authentication.pdb

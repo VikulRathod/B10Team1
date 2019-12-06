@@ -1,0 +1,230 @@
+﻿
+
+Create table tblUsers
+(
+ [Id] int identity primary key,
+ [UserName] nvarchar(100),
+ [Password] nvarchar(200),
+ [Email] nvarchar(100),
+ [RetryAttempts] int,
+ [IsLocked] bit,
+ [LockedDateTime] datetime
+) 
+
+go
+
+CREATE proc spRegisterUser  
+@UserName nvarchar(100),  
+@Password nvarchar (200),  
+@Email nvarchar (200)  
+as  
+Begin  
+ Declare @Count int  
+ Declare @ReturnCode int  
+   
+ Select @Count = COUNT(UserName)   
+ from tblUsers where UserName = @UserName  
+ If @Count > 0  
+ Begin  
+  Set @ReturnCode = -1  
+ End  
+ Else  
+ Begin  
+  Set @ReturnCode = 1  
+  --Change: Column list specified while inserting
+  Insert into tblUsers([UserName], [Password], [Email]) 
+  values  (@UserName, @Password, @Email)  
+ End  
+ Select @ReturnCode as ReturnValue  
+End  
+
+go
+
+CREATE proc spAuthenticateUser
+@UserName nvarchar(100),
+@Password nvarchar(200)
+as
+Begin
+ Declare @AccountLocked bit
+ Declare @Count int
+ Declare @RetryCount int
+ 
+ Select @AccountLocked = IsLocked
+ from tblUsers where UserName = @UserName
+  
+ --If the account is already locked
+ if(@AccountLocked = 1)
+ Begin
+  Select 1 as AccountLocked, 0 as Authenticated, 0 as RetryAttempts
+ End
+ Else
+ Begin
+  -- Check if the username and password match
+  Select @Count = COUNT(UserName) from tblUsers
+  where [UserName] = @UserName and [Password] = @Password
+  
+  -- If match found
+  if(@Count = 1)
+  Begin
+   -- Reset RetryAttempts 
+   Update tblUsers set RetryAttempts = 0
+   where UserName = @UserName
+       
+   Select 0 as AccountLocked, 1 as Authenticated, 0 as RetryAttempts
+  End
+  Else
+  Begin
+   -- If a match is not found
+   Select @RetryCount = IsNULL(RetryAttempts, 0)
+   from tblUsers
+   where UserName = @UserName
+   
+   Set @RetryCount = @RetryCount + 1
+   
+   if(@RetryCount <= 3)
+   Begin
+    -- If re-try attempts are not completed
+    Update tblUsers set RetryAttempts = @RetryCount
+    where UserName = @UserName 
+    
+    Select 0 as AccountLocked, 0 as Authenticated, @RetryCount as RetryAttempts
+   End
+   Else
+   Begin
+    -- If re-try attempts are completed
+    Update tblUsers set RetryAttempts = @RetryCount,
+    IsLocked = 1, LockedDateTime = GETDATE()
+    where UserName = @UserName
+
+    Select 1 as AccountLocked, 0 as Authenticated, 0 as RetryAttempts
+   End
+  End
+ End
+End
+
+go
+Create table tblResetPasswordRequests
+(
+ Id UniqueIdentifier Primary key,
+ UserId int Foreign key references tblUsers(Id),
+ ResetRequestDateTime DateTime
+)
+
+go
+
+Create proc spResetPassword
+@UserName nvarchar(100)
+as
+Begin
+ Declare @UserId int
+ Declare @Email nvarchar(100)
+ 
+ Select @UserId = Id, @Email = Email 
+ from tblUsers
+ where UserName = @UserName
+ 
+ if(@UserId IS NOT NULL)
+ Begin
+  --If username exists
+  Declare @GUID UniqueIdentifier
+  Set @GUID = NEWID()
+  
+  Insert into tblResetPasswordRequests
+  (Id, UserId, ResetRequestDateTime)
+  Values(@GUID, @UserId, GETDATE())
+  
+  Select 1 as ReturnCode, @GUID as UniqueId, @Email as Email
+ End
+ Else
+ Begin
+  --If username does not exist
+  SELECT 0 as ReturnCode, NULL as UniqueId, NULL as Email
+ End
+End
+
+go
+
+Create Proc spIsPasswordResetLinkValid 
+@GUID uniqueidentifier
+as
+Begin
+ Declare @UserId int
+ 
+ If(Exists(Select UserId from tblResetPasswordRequests where Id = @GUID))
+ Begin
+  Select 1 as IsValidPasswordResetLink
+ End
+ Else
+ Begin
+  Select 0 as IsValidPasswordResetLink
+ End
+End
+
+
+go
+
+Create Proc spChangePassword
+@GUID uniqueidentifier,
+@Password nvarchar(100)
+as
+Begin
+ Declare @UserId int
+ 
+ Select @UserId = UserId 
+ from tblResetPasswordRequests
+ where Id= @GUID
+ 
+ if(@UserId is null)
+ Begin
+  -- If UserId does not exist
+  Select 0 as IsPasswordChanged
+ End
+ Else
+ Begin
+  -- If UserId exists, Update with new password
+  Update tblUsers set
+  [Password] = @Password
+  where Id = @UserId
+  
+  -- Delete the password reset request row 
+  Delete from tblResetPasswordRequests
+  where Id = @GUID
+  
+  Select 1 as IsPasswordChanged
+ End
+End
+
+go
+
+Create Proc spChangePasswordUsingCurrentPassword
+@UserName nvarchar(100),
+@CurrentPassword nvarchar(100),
+@NewPassword nvarchar(100)
+as
+Begin
+ if(Exists(Select Id from tblUsers 
+     where UserName = @UserName
+     and [Password] = @CurrentPassword))
+ Begin
+  Update tblUsers
+  Set [Password] = @NewPassword
+  where UserName = @UserName
+  
+  Select 1 as IsPasswordChanged
+ End
+ Else
+ Begin
+  Select 0 as IsPasswordChanged
+ End
+End 
+
+go
+
+Create proc spGetAllLocakedUserAccounts
+as
+Begin
+ Select UserName, Email, LockedDateTime,
+ DATEDIFF(hour, LockedDateTime, GETDATE()) as HoursElapsed
+ from tblUsers
+ where IsLocked = 1
+End 

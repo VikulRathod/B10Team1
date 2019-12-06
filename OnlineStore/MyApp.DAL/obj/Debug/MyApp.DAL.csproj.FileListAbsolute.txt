@@ -1,0 +1,7 @@
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\bin\Debug\MyApp.DAL.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\bin\Debug\MyApp.DAL.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\obj\Debug\MyApp.DAL.csprojResolveAssemblyReference.cache
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\obj\Debug\MyApp.DAL.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\obj\Debug\MyApp.DAL.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\bin\Debug\MyApp.Models.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.DAL\bin\Debug\MyApp.Models.pdb
