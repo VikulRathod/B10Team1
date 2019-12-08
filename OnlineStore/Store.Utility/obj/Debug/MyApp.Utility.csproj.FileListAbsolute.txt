@@ -1,5 +1,0 @@
-F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Utility\bin\Debug\MyApp.Utility.dll
-F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Utility\bin\Debug\MyApp.Utility.pdb
-F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Utility\obj\Debug\MyApp.Utility.dll
-F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Utility\obj\Debug\MyApp.Utility.pdb
-F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\AuthenticationDemo\MyApp.Utility\obj\Debug\MyApp.Utility.csprojResolveAssemblyReference.cache
