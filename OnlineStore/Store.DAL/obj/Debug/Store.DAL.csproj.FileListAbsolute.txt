@@ -1,0 +1,14 @@
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\bin\Debug\MyApp.DAL.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\bin\Debug\MyApp.DAL.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\bin\Debug\MyApp.Models.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\bin\Debug\MyApp.Models.pdb
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\obj\Debug\Store.DAL.csprojResolveAssemblyReference.cache
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\obj\Debug\MyApp.DAL.dll
+F:\Vikul\Scoopen Institutes\Study Material\Books - Edited\ASP.NET\Projects\OnlineStore\MyApp.DAL\obj\Debug\MyApp.DAL.pdb
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\bin\Debug\MyApp.DAL.dll
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\bin\Debug\MyApp.DAL.pdb
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\bin\Debug\MyApp.Models.dll
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\bin\Debug\MyApp.Models.pdb
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\obj\Debug\Store.DAL.csprojResolveAssemblyReference.cache
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\obj\Debug\MyApp.DAL.dll
+F:\Vikul\GITHUB\B10Team1\OnlineStore\Store.DAL\obj\Debug\MyApp.DAL.pdb

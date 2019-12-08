@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Presentation", "1-Authentication\Store.Presentation.csproj", "{85102E5F-A2E5-49E5-BBBF-A2BFCDE916AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Presentation", "Store.Presentation\Store.Presentation.csproj", "{85102E5F-A2E5-49E5-BBBF-A2BFCDE916AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.DAL", "MyApp.DAL\Store.DAL.csproj", "{C8FCF8ED-D4B9-41CD-9E24-441F229310B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.DAL", "Store.DAL\Store.DAL.csproj", "{C8FCF8ED-D4B9-41CD-9E24-441F229310B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.BLL", "MyApp.BLL\Store.BLL.csproj", "{980CE0F2-8468-4B2E-B109-F668714C5C41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.BLL", "Store.BLL\Store.BLL.csproj", "{980CE0F2-8468-4B2E-B109-F668714C5C41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Models", "MyApp.Models\Store.Models.csproj", "{F3BF320F-28ED-4988-9205-FCA643B896AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Models", "Store.Models\Store.Models.csproj", "{F3BF320F-28ED-4988-9205-FCA643B896AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Utility", "MyApp.Utility\Store.Utility.csproj", "{FFA3108B-7126-4DBC-95CC-F092FE59625B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Utility", "Store.Utility\Store.Utility.csproj", "{FFA3108B-7126-4DBC-95CC-F092FE59625B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
