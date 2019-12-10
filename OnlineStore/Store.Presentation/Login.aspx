@@ -32,7 +32,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        <asp:Button ID="btnLogin" runat="server" Text="Sign in" OnClick="btnLogin_Click" />
                         <asp:CheckBox ID="chkBoxRememberMe" runat="server" Text="Remember Me" />
                     </td>
                 </tr>
